@@ -3,16 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const lengthValue = document.getElementById('lengthValue');
     const generateBtn = document.getElementById('generateBtn');
     const passwordOutput = document.getElementById('passwordOutput');
-  
-    // Display initial password length value
-    lengthValue.textContent = lengthRange.value;
-  
-    // Update password length value when slider is moved
+
+    lengthValue.textContent = lengthRange.value;d
     lengthRange.addEventListener('input', function() {
       lengthValue.textContent = this.value;
     });
   
-    // Generate password function
+
     function generatePassword(length) {
       const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#:,.<>?";
       let password = "";
@@ -23,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return password;
     }
   
-    // Generate password on button click
+   
     generateBtn.addEventListener('click', function() {
       const passwordLength = parseInt(lengthRange.value);
       const generatedPassword = generatePassword(passwordLength);
